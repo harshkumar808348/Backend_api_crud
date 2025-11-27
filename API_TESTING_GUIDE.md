@@ -2,11 +2,21 @@
 
 This guide shows you how to test all API endpoints using different methods.
 
+## 🌐 Live API
+
+**Deployment URL:** [https://backend-api-crud.onrender.com](https://backend-api-crud.onrender.com)
+
+You can test the live API directly without running the server locally!
+
 ## Prerequisites
 
+### For Local Testing:
 1. Make sure MongoDB is running
 2. Start the server: `npm start`
 3. Server should be running on `http://localhost:5000`
+
+### For Live API Testing:
+No prerequisites needed! Just use the base URL: `https://backend-api-crud.onrender.com`
 
 ---
 
@@ -31,8 +41,15 @@ Only GET requests can be tested directly in browser.
 ### 1. Employee Endpoints
 
 #### Create Employee
+
+**Local:**
 ```bash
 POST http://localhost:5000/api/employees
+```
+
+**Live API:**
+```bash
+POST https://backend-api-crud.onrender.com/api/employees
 Content-Type: application/json
 
 {
@@ -44,21 +61,40 @@ Content-Type: application/json
 }
 ```
 
-**cURL:**
+**cURL (Local):**
 ```bash
 curl -X POST http://localhost:5000/api/employees \
   -H "Content-Type: application/json" \
   -d "{\"name\":\"John Doe\",\"email\":\"john.doe@example.com\",\"position\":\"Software Engineer\",\"department\":\"Engineering\",\"salary\":75000}"
 ```
 
+**cURL (Live API):**
+```bash
+curl -X POST https://backend-api-crud.onrender.com/api/employees \
+  -H "Content-Type: application/json" \
+  -d "{\"name\":\"John Doe\",\"email\":\"john.doe@example.com\",\"position\":\"Software Engineer\",\"department\":\"Engineering\",\"salary\":75000}"
+```
+
 #### Get All Employees
+
+**Local:**
 ```bash
 GET http://localhost:5000/api/employees
 ```
 
-**cURL:**
+**Live API:**
+```bash
+GET https://backend-api-crud.onrender.com/api/employees
+```
+
+**cURL (Local):**
 ```bash
 curl http://localhost:5000/api/employees
+```
+
+**cURL (Live API):**
+```bash
+curl https://backend-api-crud.onrender.com/api/employees
 ```
 
 #### Get Employee by ID
