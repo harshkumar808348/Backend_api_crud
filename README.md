@@ -4,6 +4,12 @@
 
 ### RESTful API for User, Product & Task Management
 
+![API Screenshot 1](https://github.com/harshkumar808348/Edu-Connect/blob/6cd460ad1d314b41ca25d451838f8d44779e6c5b/Picture2.jpg)
+
+![API Screenshot 2](https://github.com/harshkumar808348/Edu-Connect/blob/6cd460ad1d314b41ca25d451838f8d44779e6c5b/Picture3.png)
+
+![API Screenshot 3](https://github.com/harshkumar808348/Edu-Connect/blob/6cd460ad1d314b41ca25d451838f8d44779e6c5b/Picture4.png)
+
 [![Live Demo](https://img.shields.io/badge/Live%20API-Visit-success?style=for-the-badge&logo=vercel)](https://backend-api-crud.onrender.com)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-4.18+-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
@@ -13,27 +19,6 @@
 **[📖 API Documentation](#-api-endpoints)** • **[🚀 Quick Start](#-quick-start)** • **[🧪 Testing](#-testing)** • **[🌐 Live API](https://backend-api-crud.onrender.com)**
 
 </div>
-
----
-
-## 📋 Table of Contents
-
-- [Overview](#-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Architecture](#-architecture)
-- [Quick Start](#-quick-start)
-- [Project Structure](#-project-structure)
-- [API Endpoints](#-api-endpoints)
-- [Database Schema](#-database-schema)
-- [Testing](#-testing)
-- [Deployment](#-deployment)
-- [Environment Variables](#-environment-variables)
-- [Error Handling](#-error-handling)
-- [Contributing](#-contributing)
-
----
-
 ## 🎯 Overview
 
 A production-ready RESTful API built with Node.js, Express, and MongoDB for managing users, products, and tasks in a modern dashboard application. The API features comprehensive CRUD operations, data validation, relationship management, and robust error handling.
@@ -126,24 +111,7 @@ https://backend-api-crud.onrender.com/api
 
 </div>
 
----
 
-## 🏗 Architecture
-
-### MVC Pattern
-
-```mermaid
-graph TB
-    A[Client Request] --> B[Routes]
-    B --> C[Controllers]
-    C --> D[Models]
-    D --> E[MongoDB]
-    E --> D
-    D --> C
-    C --> F[Error Handler]
-    F --> G[Client Response]
-    C --> G
-```
 
 ### Design Principles
 
@@ -169,7 +137,7 @@ npm or yarn package manager
 
 ```bash
 # 1️⃣ Clone the repository
-git clone https://github.com/yourusername/dashboard-api.git
+git clone https://github.com/harshkumar808348/dashboard-api.git
 cd dashboard-api
 
 # 2️⃣ Install dependencies
@@ -200,51 +168,7 @@ curl http://localhost:5000/api/health
   "message": "Dashboard API is running",
   "timestamp": "2024-11-27T10:30:00.000Z"
 }
-```
 
----
-
-## 📁 Project Structure
-
-```
-backend/
-├── 📂 config/
-│   └── database.js              # MongoDB connection setup
-│
-├── 📂 models/
-│   ├── User.js                  # User schema & model
-│   ├── Product.js               # Product schema & model
-│   └── Task.js                  # Task schema & model
-│
-├── 📂 controllers/
-│   ├── userController.js        # User business logic
-│   ├── productController.js     # Product business logic
-│   └── taskController.js        # Task business logic
-│
-├── 📂 routes/
-│   ├── users.js                 # User API endpoints
-│   ├── products.js              # Product API endpoints
-│   └── tasks.js                 # Task API endpoints
-│
-├── 📂 middleware/
-│   └── errorHandler.js          # Global error handling
-│
-├── 📂 utils/
-│   ├── validators.js            # Input validation helpers
-│   └── helpers.js               # Utility functions
-│
-├── 📂 tests/
-│   ├── user.test.js             # User endpoint tests
-│   ├── product.test.js          # Product endpoint tests
-│   └── task.test.js             # Task endpoint tests
-│
-├── 📄 server.js                 # Main application entry
-├── 📄 .env.example              # Environment variables template
-├── 📄 package.json              # Project dependencies
-└── 📄 README.md                 # This file
-```
-
----
 
 ## 📡 API Endpoints
 
@@ -582,6 +506,29 @@ Import the provided `postman_collection.json` file into Postman for comprehensiv
    NODE_ENV=production
    ```
 
+4. **Deploy** 🚀
+
+### Deploy to Railway
+
+```bash
+# Install Railway CLI
+npm i -g @railway/cli
+
+# Login
+railway login
+
+# Initialize project
+railway init
+
+# Add environment variables
+railway variables set MONGODB_URI=your_mongodb_uri
+
+# Deploy
+railway up
+```
+
+---
+
 ## 🔐 Environment Variables
 
 Create a `.env` file in the root directory:
@@ -706,7 +653,7 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-[![GitHub Issues](https://img.shields.io/badge/Issues-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/yourusername/dashboard-api/issues)
+[![GitHub Issues](https://img.shields.io/badge/Issues-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/harshkumar808348/dashboard-api/issues)
 [![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@example.com)
 
 **Need help?** Open an issue or reach out via email.
@@ -722,7 +669,3 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 </div>
 
 ---
-
-*Last Updated: November 2025*
-
-</div>
